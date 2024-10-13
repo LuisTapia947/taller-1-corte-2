@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Presiona una tecla</h1>
+    <div id="resultado">Aquí aparecerá el carácter y su código ASCII</div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            var resultado = document.getElementById('resultado');
+            var caracter = event.key;
+            var codigoAscii = event.key.charCodeAt(0);
+            resultado.textContent = `Carácter: ${caracter}, Código ASCII: ${codigoAscii}`;
+        });
+    </script>
+</body>
+</html>

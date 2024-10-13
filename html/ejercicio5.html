@@ -1,0 +1,90 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0152)http://dis.um.es/~lopezquesada/documentos/IES_1314/IAW/curso/UT7/libroswebjavascript/www.librosweb.es/javascript/ejercicios/ejercicio14/ejercicio14.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Ejercicio4</title>
+   
+</head>
+
+<body>
+
+    <p id="contenido1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus
+        libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+        posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    
+        <button id="ocultarBtn1">Ocultar</button>
+
+    <br>
+
+    <p id="contenido2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus
+        libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+        posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    
+    <button id="ocultarBtn2">Ocultar</button>
+
+    <br>
+
+    <p id="contenido3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus
+        libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+        posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    
+
+
+  
+    
+    <button id="ocultarBtn3">Ocultar</button>
+
+
+     <script> 
+        
+            document.getElementById("ocultarBtn1").onclick = function () {
+                var parrafo = document.getElementById("contenido1");
+               
+                if (parrafo.style.display !== "none") {
+                    parrafo.style.display = "none"; 
+                    this.textContent = "Mostrar Sección";
+                } else {
+                    parrafo.style.display = "block"; 
+                    this.textContent = "Ocultar Sección"; 
+                }
+            }
+            document.getElementById("ocultarBtn2").onclick = function () {
+                var parrafo = document.getElementById("contenido2");
+                
+                if (parrafo.style.display !== "none") {
+                    parrafo.style.display = "none"; 
+                    this.textContent = "Mostrar Sección"; 
+                } else {
+                    parrafo.style.display = "block"; 
+                    this.textContent = "Ocultar Sección"; 
+                }
+            }
+            document.getElementById("ocultarBtn3").onclick = function () {
+                var parrafo = document.getElementById("contenido3");
+                
+                if (parrafo.style.display !== "none") {
+                    parrafo.style.display = "none"; 
+                    this.textContent = "Mostrar Sección"; 
+                } else {
+                    parrafo.style.display = "block"; 
+                    this.textContent = "Ocultar Sección"; 
+                }
+            }
+        
+    </script> 
+</body>
+
+</html>

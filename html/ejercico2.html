@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+
+</head>
+
+<body>
+
+
+    <h1>Convertir Dolares a Pesos</h1>
+    <form id="formulario">
+        <label>Cantidad en Dolares:</label>
+        <input type="number" id="dolares" placeholder="Ingrese la cantidad" required>
+        <button type="submit">Convertir</button>
+    </form>
+
+    <h2 id="resultado"></h2>
+
+    <script>
+        var tasaCambio = 4000
+        document.getElementById("formulario").addEventListener("submit", function (event) {
+            event.preventDefault();
+            var dolares = parseFloat(document.getElementById("dolares").value);
+            var pesos = dolares * tasaCambio;
+            document.getElementById("resultado").textContent = `${dolares} dólares son ${pesos} pesos.`;
+        });
+    </script>
+</body>
+
+</html>

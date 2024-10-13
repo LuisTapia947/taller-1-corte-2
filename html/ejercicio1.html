@@ -1,0 +1,39 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Ejercicio # 1</title>
+    <script>
+       palabras = [
+            "manzana", "banana", "naranja", "pera", "uva", "fresa", "kiwi", "mango",
+            "cereza", "piña"
+        ]
+        function anade() {
+            indiceAleatorio = Math.floor(Math.random() * palabras.length)
+            nuevoLi = document.createElement("li")
+            nuevoLi.textContent = palabras[indiceAleatorio]
+            document.getElementById("lista").appendChild(nuevoLi)
+        }
+    </script>
+</head>
+
+<body>
+ 
+    <ul id="lista">
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Consectetuer adipiscing elit</li>
+        <li>Sed mattis enim vitae orci</li>
+        <li>Phasellus libero</li>
+        <li>Maecenas nisl arcu</li>
+    </ul>
+    <input id="Anadir" type="button" value="Anadir elemento">
+
+    <script>
+        document.getElementById("Anadir").onclick = function () {
+            anade();
+        }
+    </script>
+</body>
+
+</html>

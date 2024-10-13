@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejecicio3</title>
+</head>
+
+<body>
+    <h1>Convertir temperatura</h1>
+    <form id="formulario">
+        <label>Grados Centigrados:</label>
+        <input type="number" id="centigrados" placeholder="Ingrese la temperatura" required>
+
+        <button type="submit">Convertir</button>
+    </form>
+
+    <label>Grados Fahrenheit:</label>
+    <input type="text" id="resultado">
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function (event) {
+            
+            event.preventDefault()
+
+            var centigrados = parseFloat(document.getElementById("centigrados").value)
+            var fahrenheit = (centigrados * (9 / 5)) + 32
+
+            document.getElementById("resultado").value = fahrenheit.toFixed(2)  });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo4</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label, input, button {
+            margin-top: 10px;
+            display: block;
+        }
+
+        .tabla-empleados {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        .fila {
+            display: flex;
+            padding: 8px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .fila:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .celda {
+            flex: 1;
+            padding: 8px;
+        }
+
+        .encabezado {
+            font-weight: bold;
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Registro de Empleados</h1>
+    <form id="formulario">
+        <label for="codigo">Código del Empleado:</label>
+        <input type="text" id="codigo" required>
+
+        <label for="nombre">Nombre del Empleado:</label>
+        <input type="text" id="nombre" required>
+
+        <button type="button" id="agregarBtn">Agregar Empleado</button>
+    </form>
+
+    <div class="tabla-empleados">
+        <div class="fila encabezado">
+            <div class="celda">Código</div>
+            <div class="celda">Nombre</div>
+        </div>
+        <div id="cuerpoTabla">
+          
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("agregarBtn").onclick = function () {
+            var codigo = document.getElementById("codigo").value
+            var nombre = document.getElementById("nombre").value
+
+            var nuevaFila = document.createElement("div")
+            nuevaFila.className = "fila"
+
+            var celdaCodigo = document.createElement("div")
+            celdaCodigo.className = "celda"
+            celdaCodigo.textContent = codigo
+
+            var celdaNombre = document.createElement("div");
+            celdaNombre.className = "celda"
+            celdaNombre.textContent = nombre
+
+            nuevaFila.appendChild(celdaCodigo)
+            nuevaFila.appendChild(celdaNombre)
+
+            document.getElementById("cuerpoTabla").appendChild(nuevaFila);
+
+            document.getElementById("codigo").value = ''
+            document.getElementById("nombre").value = ''
+        }
+    </script>
+</body>
+
+</html>
